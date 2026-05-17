@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blue & White 白皮书工作台</title>
+    <link rel="stylesheet" href="bw-whitepaper.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Nico BW</p>
+          <h1>Blue & White 白皮书工作台</h1>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="白皮书筛选">
+        <label>
+          搜索
+          <input id="search" type="search" placeholder="模块、问题、品牌、交付、用户..." />
+        </label>
+        <label>
+          分组
+          <select id="phase">
+            <option value="all">全部模块</option>
+            <option value="表一">表一：Why BW Exists</option>
+            <option value="表二">表二：Why People Buy</option>
+          </select>
+        </label>
+        <label>
+          视图
+          <select id="view">
+            <option value="structure">完整结构</option>
+            <option value="table">可交互表格</option>
+            <option value="diagram">模块 Diagram</option>
+            <option value="source">原图证据</option>
+          </select>
+        </label>
+        <button id="export" type="button">导出 PDF</button>
+        <div class="share-actions" aria-label="答案协作">
+          <button id="answer-export" type="button">导出答案包</button>
+          <label for="answer-import">导入答案包</label>
+          <input id="answer-import" type="file" accept="application/json,.json" />
+        </div>
+        <p id="sync-status" class="sync-status">本地模式</p>
+      </section>
+
+      <section id="overview-hero" class="overview-hero" aria-label="总领"></section>
+
+      <section class="workspace">
+        <aside class="module-list" aria-label="白皮书目录">
+          <div class="list-heading">
+            <h2>目录 / 板块</h2>
+            <span id="result-count">0</span>
+          </div>
+          <div id="cards"></div>
+        </aside>
+
+        <section class="main-panel">
+          <div id="structure-view" class="view-panel"></div>
+          <div id="table-view" class="view-panel" hidden></div>
+          <div id="diagram-view" class="view-panel" hidden></div>
+          <div id="source-view" class="view-panel" hidden></div>
+        </section>
+
+        <aside class="detail-panel" aria-label="模块细节">
+          <div class="detail-header">
+            <p id="detail-kicker">选择一个模块</p>
+            <h2 id="detail-title">白皮书结构</h2>
+          </div>
+          <section id="selected-question" class="selected-question-panel" aria-label="当前问题"></section>
+          <div class="detail-block">
+            <h3>回答草稿 / 追问空间</h3>
+            <div class="editor-shell">
+              <div class="editor-toolbar" aria-label="编辑工具">
+                <button type="button" data-command="bold" aria-label="加粗"><strong>B</strong></button>
+                <button type="button" data-command="italic" aria-label="斜体"><em>I</em></button>
+                <button type="button" data-command="underline" aria-label="下划线"><u>U</u></button>
+                <button type="button" data-list="ordered">1.</button>
+                <button type="button" data-list="disc">•</button>
+                <button type="button" data-list="circle">○</button>
+                <button type="button" data-list="dash">-</button>
+                <button type="button" data-command="formatBlock" data-value="h3">小标题</button>
+                <select id="font-size" aria-label="字体大小">
+                  <option value="">字号</option>
+                  <option value="2">小</option>
+                  <option value="3">正文</option>
+                  <option value="4">大</option>
+                  <option value="5">标题</option>
+                </select>
+                <label class="color-tool" aria-label="字体颜色">
+                  颜色
+                  <input id="font-color" type="color" value="#17242d" />
+                </label>
+                <label class="image-upload-button" for="image-upload">上传照片</label>
+                <input id="image-upload" type="file" accept="image/*" multiple />
+              </div>
+              <div id="notes" class="notes-editor" contenteditable="true" role="textbox" aria-multiline="true" spellcheck="false"></div>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <button id="prompt" type="button">上传答案</button>
+            <button id="clear" type="button">清空草稿</button>
+          </div>
+          <dl id="detail-meta"></dl>
+        </aside>
+      </section>
+    </main>
+
+    <script src="bw-supabase-config.js"></script>
+    <script src="bw-whitepaper.js"></script>
+  </body>
+</html>
