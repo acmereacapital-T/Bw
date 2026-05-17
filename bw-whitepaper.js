@@ -498,6 +498,211 @@ const fullText = {
   },
 };
 
+const supportPhrases = {
+  1: {
+    requirements: [
+      ["Waldorf 公开说法", "需要谨慎的边界"],
+      ["2-4 个代表项目", "Waldorf / 私宅 / FF&E"],
+      ["每项目 1-2 个判断", "比例 / 材料 / 工艺 / 舒适度 / 空间气质"],
+      ["BW 可服务的市场空位"],
+    ],
+    reason: [
+      ["Waldorf 设计总监经历", "Founder credibility", "转化为审美标准 / 产品判断"],
+      ["私宅与 FF&E 经验", "客户选品问题", "供应链协调问题"],
+      ["客户信任的不是项目名", "信任判断能力", "高级比例 / 材料耐看 / 住宅成立"],
+      ["Founder Story", "About Page", "Homepage credibility", "产品页 designer note"],
+    ],
+  },
+  2: {
+    requirements: [
+      ["过去经验", "形成能力", "对 BW 的价值"],
+      ["3-5 条核心转化路径"],
+      ["普通 seller 不具备的能力", "普通 buyer 不具备的能力", "普通 dropshipper 不具备的能力"],
+      ["为什么 BW 适合由你来做"],
+    ],
+    reason: [
+      ["不是泛泛创业故事", "设计师身份如何长出 BW"],
+      ["审美判断", "材料判断", "项目经验", "供应链经验"],
+      ["避免普通海外家具网站感", "建立 designer-led curated brand"],
+      ["家具零售", "设计师策展", "供应链平台", "高端审美 access"],
+    ],
+  },
+  3: {
+    requirements: [
+      ["最初判断", "被验证判断", "需要更新判断", "现在最确定机会"],
+      ["真实订单", "客户对话", "失败案例", "市场观察"],
+      ["价格 / 设计 / 材料", "品控 / 交付 / 独特性", "信任 / 选择效率"],
+      ["今天 BW 最该解决的问题"],
+    ],
+    reason: [
+      ["实操 2-3 年后的反馈", "比早期判断更重要"],
+      ["真实订单验证", "客户行为验证", "定位更有力量"],
+      ["不能解决所有问题", "先抓最值得的痛点"],
+      ["首页文案", "FAQ", "产品页卖点", "社媒教育内容"],
+    ],
+  },
+  4: {
+    requirements: [
+      ["每组前 3 排序"],
+      ["每组最接近 BW 的 1 个"],
+      ["每组最不适合 BW 的 1 个"],
+      ["补充更准确维度或词"],
+    ],
+    reason: [
+      ["不只用价格定义", "同时看审美 / 信任 / 交付 / 价值 / 商业模式"],
+      ["避免定位摇摆", "家具电商 / 设计品牌 / 供应链平台 / 工坊故事"],
+      ["解释 $500-$2,000", "为什么不买更便宜", "为什么不必买更贵"],
+      ["先建立坐标系", "未来持续迭代"],
+    ],
+  },
+  5: {
+    requirements: [
+      ["为什么看", "为什么买", "为什么不买", "BW 怎么赢 / 怎么输 / 学什么"],
+      ["价格 / 审美 / 信任", "交付 / 工艺 / 品类 / 网站体验"],
+      ["2 个最值得学", "2 个最需要区分", "1 个最接近未来方向"],
+    ],
+    reason: [
+      ["客户只比较结果", "更好看 / 更可信 / 更方便 / 更值得买"],
+      ["抢客户", "抢信任", "抢审美位置"],
+      ["哪里赢", "哪里输"],
+      ["可以学对手", "不能失去 BW 气质"],
+      ["网站 / 产品页 / FAQ", "价格解释 / 退换政策 / 社媒内容"],
+    ],
+  },
+  6: {
+    requirements: [
+      ["选入标准", "淘汰标准"],
+      ["每维度一个产品例子", "或一个未选例子"],
+      ["最重要 5 个标准", "原因排序"],
+      ["3 个不可妥协底线"],
+    ],
+    reason: [
+      ["持续筛选", "持续拒绝", "持续解释产品"],
+      ["designer-led brand 边界", "避免 Amazon / 淘宝 / 批发感"],
+      ["客户把复杂判断交给 BW", "标准必须清楚"],
+      ["团队复用", "网站复用", "产品页 / AI 内容 / 供应链筛选复用"],
+    ],
+  },
+  7: {
+    requirements: [
+      ["下单", "生产", "中检", "出厂", "包装", "发货", "到货"],
+      ["5 个关键质量风险"],
+      ["1-2 个真实质量问题", "现在如何预防"],
+      ["一句客户能听懂的信任表达"],
+    ],
+    reason: [
+      ["图物不符", "运输损坏", "售后没人负责", "海外质量不可控"],
+      ["家具低容错", "一次事故伤品牌", "品控变可见资产"],
+      ["$500-$2,000 的信任支撑", "区别普通海外平台货"],
+      ["trust section", "FAQ", "product page", "email update", "交付说明"],
+    ],
+  },
+  8: {
+    requirements: [
+      ["2-3 个长期工坊 / maker"],
+      ["品类 / 材料 / 工艺", "稀缺性 / 稳定性 / 故事点 / 代表产品"],
+      ["城市", "照片 / 视频", "制作过程", "材料细节"],
+      ["是否帮助客户下单", "不只是品牌氛围"],
+    ],
+    reason: [
+      ["不止匠人精神", "解释产品为什么更好", "解释为什么更值得"],
+      ["长期供应链资产", "支撑审美 / 品控 / 内容"],
+      ["客户听得懂工艺价值", "提升信任与购买理由"],
+      ["Makers 页面", "产品详情", "社媒内容", "工艺短视频", "trade client 沟通"],
+    ],
+  },
+  9: {
+    requirements: [
+      ["6 层逐层回答", "BW 好在哪里", "平台货常见问题", "客户如何感受"],
+      ["Wayfair", "Amazon", "淘宝货", "普通工厂货"],
+      ["产品 / 材料 / 细节", "真实客户反馈"],
+      ["3 个核心差异点", "按重要性排序"],
+      ["3 句产品页卖点"],
+    ],
+    reason: [
+      ["客户看得见", "摸得到", "用得上", "相信得了"],
+      ["为什么不买更便宜", "$500-$2,000 的理由"],
+      ["产品页", "detail shot", "FAQ", "社媒 / 广告表达"],
+      ["避免 ordinary overseas reseller"],
+    ],
+  },
+  10: {
+    requirements: [
+      ["制作", "质检", "包装", "运输", "到货"],
+      ["相比快家具的等待价值", "相比高端定制的效率优势"],
+      ["适合等待的 2-3 类产品", "不适合等待的 1-2 类产品"],
+      ["3 个客户担心", "提前解释方式"],
+      ["homeowner 文案", "designer / trade client 文案"],
+    ],
+    reason: [
+      ["不是单纯 shipping time", "快家具与高端定制之间的位置"],
+      ["客户不是不能等", "客户怕不知道为什么等"],
+      ["透明过程增加信任", "不透明等待变风险"],
+      ["反向影响选品边界"],
+    ],
+  },
+  11: {
+    requirements: [
+      ["红榜前 5", "按重要性排序"],
+      ["黑榜前 5", "按禁区优先级排序"],
+      ["3 个核心品牌气质"],
+      ["最不希望被误解成什么"],
+      ["删 / 改 / 补不准确词"],
+    ],
+    reason: [
+      ["design brand", "避免普通家具电商感"],
+      ["避免促销 / 批发 / dropshipping 语气", "保护价格预期"],
+      ["网站", "Instagram", "Pinterest", "产品页", "邮件"],
+      ["未来内容与销售表达边界"],
+    ],
+  },
+  12: {
+    requirements: [
+      ["前 3 类优先客户"],
+      ["他们是谁", "为什么买", "担心什么", "被什么打动", "适合什么产品"],
+      ["真实客户对应案例"],
+      ["现在不优先服务的客户"],
+      ["未来值得培养的客户"],
+    ],
+    reason: [
+      ["未来用户画像基础"],
+      ["动机", "焦虑", "预算边界", "信任障碍"],
+      ["早期聚焦", "最容易被打动", "最可能下单"],
+      ["homeowner", "designer", "hospitality owner", "小型商业客户"],
+    ],
+  },
+  13: {
+    requirements: [
+      ["前 5 个重要价值"],
+      ["最核心 1 个", "为什么"],
+      ["每层一句客户心里话"],
+      ["促成下单的价值", "适合品牌叙事的价值"],
+      ["最强 2-3 层价值组合"],
+    ],
+    reason: [
+      ["卖产品 / 空间 / 审美", "卖信任 / access"],
+      ["区分下单理由", "区分品牌包装"],
+      ["信任", "审美", "稀缺", "省心", "空间效果"],
+      ["首页 hero", "产品页卖点", "广告角度", "社媒内容"],
+    ],
+  },
+  14: {
+    requirements: [
+      ["消费者版", "Trade 版", "合作版"],
+      ["BW 是什么", "服务谁", "解决什么", "凭什么可信", "有什么不同"],
+      ["每版 1-2 句话"],
+      ["避免空泛词"],
+      ["Waldorf 审美", "curation", "工坊", "品控", "材料", "交付"],
+    ],
+    reason: [
+      ["避免漂亮但无效的 slogan"],
+      ["对象", "价值", "信任来源", "差异点"],
+      ["消费者重点", "设计师重点", "合作伙伴重点"],
+      ["homepage hero", "About 开头", "Instagram bio", "pitch summary"],
+    ],
+  },
+};
+
 const state = {
   query: "",
   phase: "all",
@@ -803,16 +1008,29 @@ function lineParts(line) {
   };
 }
 
+function isMobileViewport() {
+  return window.matchMedia("(max-width: 720px)").matches;
+}
+
+function scrollToPanel(element) {
+  if (!element || !isMobileViewport()) return;
+  window.requestAnimationFrame(() => {
+    element.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
+
 function selectModule(id) {
   state.selectedId = id;
   state.selectedPrompt = { kind: "question", index: 1 };
   state.sourceImage = selectedModule().image;
   render();
+  scrollToPanel(els.structure);
 }
 
 function selectPrompt(kind, index) {
   state.selectedPrompt = { kind, index };
   render();
+  scrollToPanel(document.querySelector(".detail-panel"));
 }
 
 function promptLinesFor(item, kind) {
@@ -1062,18 +1280,21 @@ function renderReadableBlock(title, lines, options = {}) {
   `;
 }
 
-function renderSupportColumn(title, lead, lines) {
+function renderSupportColumn(title, lines, compactLines = []) {
   return `
     <section class="support-column">
       <h3>${title}</h3>
       <ul class="support-list">
-        ${lines.map((line) => renderSupportLine(line)).join("")}
+        ${lines.map((line, index) => renderSupportLine(line, compactLines[index])).join("")}
       </ul>
     </section>
   `;
 }
 
-function supportBullets(body) {
+function supportBullets(body, compact = []) {
+  if (Array.isArray(compact) && compact.length) {
+    return compact.map((item) => String(item).trim()).filter(Boolean);
+  }
   const cleaned = String(body || "").trim().replace(/[。.]$/, "");
   if (!cleaned) return [];
   const primaryParts = cleaned
@@ -1091,9 +1312,9 @@ function supportBullets(body) {
     .filter(Boolean);
 }
 
-function renderSupportLine(line) {
+function renderSupportLine(line, compact) {
   const parts = lineParts(line);
-  const bullets = supportBullets(parts.body);
+  const bullets = supportBullets(parts.body, compact);
   return `
     <li class="support-item">
       ${parts.title ? `<strong class="support-title">${escapeHtml(parts.title)}：</strong>` : ""}
@@ -1263,8 +1484,8 @@ function renderDetail() {
   els.detailTitle.textContent = "";
   els.detailMeta.innerHTML = `
     <div class="answer-context-grid">
-      ${renderSupportColumn("回答要求", item.requirements, fullText[item.id].requirements)}
-      ${renderSupportColumn("提问原因", item.reason, fullText[item.id].reason)}
+      ${renderSupportColumn("回答要求", fullText[item.id].requirements, supportPhrases[item.id]?.requirements)}
+      ${renderSupportColumn("提问原因", fullText[item.id].reason, supportPhrases[item.id]?.reason)}
     </div>
   `;
   if (els.selectedQuestion) {
